@@ -1,38 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+:root {
+  --primary: #67e8f9;
+  --overlay-color: rgba(rgba(24, 39, 51, 0.85));
+  --menu-speed: 0.75s;
+}
+html {
+  background-color: #000;
+}
+button {
+  padding: 8px 16px;
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+.container {
+  padding: 2rem 0;
+  width: 100%;
+  /* overflow: hidden; */
+}
+.container.width-70 {
+  width: 80%;
+  margin: auto;
+  /* border: 2px solid red; */
+}
+.top.active {
+  opacity: 1;
+}
+.top.disabled {
+  cursor: default;
+}
+.top {
+  opacity: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 4rem;
+  width: fit-content;
+  transition: 200ms ease;
+}
+.btn {
+  cursor: pointer;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 64.05rem) {
+  #desktop {
+    background-color: orange;
   }
-  to {
-    transform: rotate(360deg);
+}
+/* - Laptop 1024px 64rem */
+@media (min-width: 48.05rem) and (max-width: 64rem) {
+  #laptop {
+    background-color: pink;
+  }
+}
+/* - phone:480px 30rem */
+@media (max-width: 48rem) {
+  .container.width-70 {
+    width: 100%;
+  }
+  .container {
+    padding: 2rem 0;
+    width: 100%;
+  }
+  .top {
+    left: 0;
+    margin: auto;
   }
 }

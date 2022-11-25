@@ -1,0 +1,14 @@
+.container-body {
+  background-color: #262626;
+  width: 100%;
+}
+.body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  height: fit-content;
+  width: 80%;
+  margin: auto;
+  padding-block: 2rem;
+}
+/* - Desktop: 1200px 75rem */
